@@ -1,0 +1,173 @@
+* {
+    box-sizing: content-box;
+}
+.dropdown {
+    position: relative;
+    display: flex;
+    
+    background: transparent;
+}
+.dropdown2 {
+    position: relative;
+    display: flex;
+   
+    background: transparent;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:45px;
+    right:0px;
+    width: 200px;
+    background-color: white;
+    font-weight:bold;
+    position: absolute;
+    max-height: 250px;
+    overflow-y: auto;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+li a {
+    color: #000;
+    text-decoration: none;
+}
+li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+li:last-child {
+    border-bottom: none;
+}
+li:hover {
+    background-color: #e5e5e5;
+    color: white;
+}
+.button{
+    width:178px;
+    height:18px;
+    background-color: purple ;
+    padding:12px;
+    border-radius:5px;
+    font-weight:bold;
+    color:white;
+    display: flex;
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
+    
+}
+.button2{
+    width:178px;
+    height:18px;
+    background-color: purple;
+    padding:12px;
+    border-radius:5px;
+    font-weight:bold;
+    color:white;
+    display: flex;
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
+    
+}
+.button:before{
+    content:"";
+    position:absolute;
+    width:0px;
+    height:0px;
+    border: 10px solid;
+    border-color: white transparent transparent transparent;
+    right:20px;
+    top:22px;
+}
+.button2:before{
+    content:"";
+    position:absolute;
+    width:0px;
+    height:0px;
+    border: 10px solid;
+    border-color: white transparent transparent transparent;
+    right:20px;
+    top:22px;
+}
+
+body{
+    margin: 0;
+    padding:0;
+   background-image: url(C:\Users\dmoor177\webtest\src\Images\Web1920–1-2.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+    
+}
+
+.msml{
+    color: black;
+    display: flex;
+    justify-content: center;
+    background: purple;
+    margin-top: 0;
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
+}
+.particles{
+    position: fixed;
+    right: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.carRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+.col{
+    padding: 25px;
+    margin: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,.5), 0px 2px 5px 5px grey;
+}
+.card-img-top{
+    border: 5px solid grey;
+    border-radius: 5px;
+}
+.whatBirth{
+    display: flex;
+    justify-content: center
+}
+.fade-appear{
+    opacity: 0;
+    transform: scale(0.9);
+}
+.fade-appear.fade-appear-active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 2000ms linear, transform 1000ms;
+}
+
+.fade-exit {
+    opacity: 1;
+  }
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+  .fade2-appear{
+    opacity: 0;
+}
+.fade2-appear.fade2-appear-active{
+    opacity: 1;
+    transition: 1000ms linear;
+}
+
+.fade2-exit {
+    opacity: 1;
+  }
+.fade2-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }

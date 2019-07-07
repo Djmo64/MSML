@@ -1,0 +1,124 @@
+
+.dropdown {
+   
+    position: relative;
+    display: flex;
+    
+    background: transparent;
+}
+.dropdown2 {
+    
+    position: relative;
+    display: flex;
+   
+    background: transparent;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:45px;
+    right:0px;
+    width: 200px;
+    background-color: white;
+    font-weight:bold;
+    position: absolute;
+    max-height: 250px;
+    overflow-y: auto;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+li a {
+    color: #000;
+    text-decoration: none;
+}
+li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+li:last-child {
+    border-bottom: none;
+}
+li:hover {
+    background-color: #e5e5e5;
+    color: white;
+}
+.button{
+    width:178px;
+    height:18px;
+    background-color: purple ;
+    padding:12px;
+    border-radius:5px;
+    font-weight:bold;
+    color:white;
+    display: flex;
+    
+}
+.button2{
+    width:178px;
+    height:18px;
+    background-color: purple;
+    padding:12px;
+    border-radius:5px;
+    font-weight:bold;
+    color:white;
+    display: flex;
+    
+}
+.button:before{
+    box-sizing: none;
+    content:"";
+    position:absolute;
+    width:0px;
+    height:0px;
+    border: 10px solid;
+    border-color: white transparent transparent transparent;
+    right:20px;
+    top:22px;
+}
+.button2:before{
+    box-sizing: none;
+    content:"";
+    position:absolute;
+    width:0px;
+    height:0px;
+    border: 10px solid;
+    border-color: white transparent transparent transparent;
+    right:20px;
+    top:22px;
+}
+
+body{
+    margin: 0;
+    padding:0;
+   background-image: url(C:\Users\dmoor177\webtest\src\Images\Web1920–1-2.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+    
+}
+
+.msml{
+    color: purple;
+    display: flex;
+    justify-content: center;
+    background: #0000009c;
+    border-radius: 20px;
+    height: 70px;
+    margin: 0;
+}
+.particles{
+    position: relative;
+    right: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.tabs{
+    box-sizing: content-box;
+}
+.card-deck{
+    box-sizing: content-box;
+}
