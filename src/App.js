@@ -28,8 +28,8 @@ class App extends React.Component {
 
     this.state = {
       epochTime : 0,
-      newMonth: '',
-      newday: '',
+      newMonth: 'January',
+      newday: '1',
       appearHome : true
     };
     this.epoch = this.epoch.bind(this);
