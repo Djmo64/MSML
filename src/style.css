@@ -54,7 +54,7 @@ li:hover {
     font-weight:bold;
     color:white;
     display: flex;
-    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5);
     
 }
 .button2{
@@ -68,6 +68,19 @@ li:hover {
     display: flex;
     box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
     
+}
+.button3{
+    width:178px;
+    height:18px;
+    background-color: purple;
+    padding:12px;
+    border-radius:5px;
+    font-weight:bold;
+    color:white;
+    display: flex;
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5);
+    justify-content: center;
+    border: none;
 }
 .button:before{
     content:"";
@@ -105,7 +118,7 @@ body{
     justify-content: center;
     background: purple;
     margin-top: 0;
-    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,.5)
+    
 }
 .particles{
     position: fixed;
@@ -132,8 +145,24 @@ body{
     box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,.5), 0px 2px 5px 5px grey;
 }
 .card-img-top{
+   
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.card-img-top:hover{
+    transform: scale(1.8);
+    transition: transform 0.5s ease;
+}
+.img-container{
     border: 5px solid grey;
     border-radius: 5px;
+    overflow: hidden;
+    max-width: 250px;
+    max-height: 250px;
+}
+.cardDiv{
+    display: flex;
 }
 .whatBirth{
     display: flex;
@@ -171,3 +200,13 @@ body{
     opacity: 0;
     transition: opacity 200ms;
   }
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.cardBtn{
+    border-radius: 50%;
+}
+.text{
+    max-width: 250px;
+}

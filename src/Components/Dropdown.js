@@ -17,13 +17,15 @@ class Dropdown extends React.Component {
   update(value) {
 
     this.setState({
-      name: value
+      name: value,
+      month: value
     });// console.log(this.state.name)
   }
   update2(value) {
 
     this.setState({
-      number: value
+      number: value,
+      day: value
     }); //console.log(this.state.number)
   }
   constructor(props) {
@@ -36,7 +38,9 @@ class Dropdown extends React.Component {
       number: 1,
       change1: false,
       change2: false,
-      appearHome: true
+      appearHome: true,
+      month: 'Month',
+      day: 'Day' 
 
     };
     this.update2 = this.update2.bind(this)
@@ -87,7 +91,7 @@ class Dropdown extends React.Component {
           
 
           <div className="dropdown" style={{ width: "200px", padding: "5px", border: "2px" }} >
-            <div className="button" onClick={this.showDropdownMenu}> Month </div>
+            <div className="button" onClick={this.showDropdownMenu}> {this.state.month} </div>
             
             {this.state.displayMenu ? (
               <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade2" >
@@ -100,7 +104,7 @@ class Dropdown extends React.Component {
 
 
           <div className="dropdown2" style={{ width: "200px", padding: "5px", border: "2px" }} >
-            <div className="button2" onClick={this.showDropdownMenu2}> Day </div>
+            <div className="button2" onClick={this.showDropdownMenu2}> {this.state.day} </div>
             {this.state.displayMenu2 ? (
                <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade2" >
               <ul>

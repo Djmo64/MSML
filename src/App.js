@@ -3,8 +3,10 @@ import Dropdown from './Components/Dropdown';
 import './style.css';
 import Particles from 'react-particles-js';
 import CardContent from './Components/CardUi';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Card } from 'reactstrap';
 import {CSSTransition} from "react-transition-group"
+import CardDeck from './Components/CardDeck';
+import * as myImages from './constants/imges';
 
 
 const particleOptions = {
@@ -13,15 +15,13 @@ const particleOptions = {
       value: 150,
       density:{
         enable: true,
-        value_area: 800
+        value_area: 1000
       }
     }
   }
 
 }
 let time = 0;
-// var newMonth;
-// var newDay;
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,8 +29,10 @@ class App extends React.Component {
     this.state = {
       epochTime : 0,
       newMonth: 'January',
-      newday: '1',
-      appearHome : true
+      newday: '3',
+      appearHome : true,
+      visible : false
+     
     };
     this.epoch = this.epoch.bind(this);
   };
@@ -43,30 +45,31 @@ class App extends React.Component {
   
   
   render(){
-    
+
   return (
     
   <div >
     <div id="topBorder">
-      <h1 className="msml" >This is a Test</h1>
+      <h1 className="msml" >Working Build</h1>
       
         <Dropdown Etime={(Month, Day) => this.epoch(Month, Day)} />
+        <div className= "submit">
+        <button className= "button3" onClick={() => {this.setState({visible: true})}}> Submit </button>
+        </div>
 
-        <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade" >
-          <p className="whatBirth" style={{ color: "white" }}> {this.state.newMonth},{this.state.newday} </p>
-        </CSSTransition>
+        {this.state.visible ? <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade" >
+           <p className="whatBirth" style={{ color: "White" }}> {this.state.newMonth},{this.state.newday} </p> 
+        </CSSTransition> : null}
 
         <Particles className="particles" params={particleOptions} />
 
-        <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade" >
+        {this.state.visible ? <CSSTransition in={this.state.appearHome} appear={true} timeout={2000} classNames="fade" >
           <Container className="cardContainer" >
             <Row className="carRow">
-              <Col><CardContent /></Col>
-              <Col><CardContent /></Col>
-              <Col><CardContent /></Col>
+              <CardContent />
             </Row>
           </Container>
-        </CSSTransition>
+        </CSSTransition>: null}
 
     </div>
 
