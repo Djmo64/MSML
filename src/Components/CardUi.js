@@ -18,7 +18,7 @@ import { Container, Row, Col } from 'reactstrap';
 const CardContent = (props) => {
   return (
     <div className="cardDiv" >
-      <Col>
+      <Col className="cardCol">
         <Card>
           <Container className="img-container">
             <CardImg top width="100%" src={image2} alt="Card image cap" />
@@ -32,7 +32,7 @@ const CardContent = (props) => {
         </Card>
       </Col>
 
-      <Col>
+      <Col className="cardCol">
         <Card>
           <Container className="img-container">
             <CardImg top width="100%" src={image3} alt="Card image cap" />
@@ -46,7 +46,7 @@ const CardContent = (props) => {
         </Card>
       </Col>
 
-      <Col>
+      <Col className="cardCol">
         <Card>
           <Container className="img-container">
             <CardImg top width="100%" src={image1} alt="Card image cap" />
